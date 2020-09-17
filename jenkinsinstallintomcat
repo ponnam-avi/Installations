@@ -1,0 +1,11 @@
+sudo apt update
+sudo apt-get install -y openjdk-8-jdk
+wget https://downloads.apache.org/tomcat/tomcat-8/v8.5.58/bin/apache-tomcat-8.5.58.tar.gz
+tar -zxvf apache-tomcat-8.5.58.tar.gz
+rm -rf apache-tomcat-8.5.58.tar.gz
+chmod -R 777 apache-tomcat-8.5.58
+cd apache-tomcat-8.5.58/webapps
+wget https://get.jenkins.io/war-stable/2.249.1/jenkins.war
+cd ../bin
+sh startup.sh
+
